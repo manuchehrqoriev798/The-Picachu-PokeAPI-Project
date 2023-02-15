@@ -367,10 +367,10 @@
   
   
   .hide {
-  display: none;
+  display: none;                                               /* to make useless default texts unvisible*/
   }
   
-  .normal {
+  .normal {                                                   /* style of pokemons*/
   background: #BABAAE;
   }
   
