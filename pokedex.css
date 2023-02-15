@@ -1,141 +1,143 @@
 
 /* bug: finish commenting CSS*/
 
+
+
 * {                                                                  /* basic reset CSS*/
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
-
-body {
+  }
+  
+  body {
   display: flex;                                                   /* iplementing flex to the whole screen and position center */
   font-family: sans-serif;
   justify-content: center;
-}
-
-.pokedex {                                                         /* positioning and sizing display*/
+  }
+  
+  .pokedex {                                                         /* positioning and sizing display*/
   align-items: flex-end;                                           /* right side of the device has some free space on top so alignitems makes it to stick to the bottom of the device the right side of the divice*/
   display: flex; 
   height: 500px;
   margin: 50px;
   width: 800px;
-}
-
-.left-container,
-.right-container {                                                /* left and right containers border and width */
+  }
+  
+  .left-container,
+  .right-container {                                                /* left and right containers border and width */
   border: 3px solid black;
   width: 50%;
-}
-
-.right-container {
+  }
+  
+  .right-container {
   border-left: none;                                            /* why border left:none. Because otherwise it would be double border in the middle of two sides*/
-}
-
-.left-container {
+  }
+  
+  .left-container {
   background: #E71D23;
   height: 100%;
   width: calc(50% + 50px);                                      /* why 50% + 50px. Because there is a connection part between two parts*/
-}
-
-.left-container__top-section {                                  /* adding property to top part of device*/
+  }
+  
+  .left-container__top-section {                                  /* adding property to top part of device*/
   border-bottom: 3px solid black;
   display: flex;
   height: 50px;
   padding: 8px;
-}
-
-.top-section__blue {                                           /* adding properties to camera of device*/
+  }
+  
+  .top-section__blue {                                           /* adding properties to camera of device*/
   background: radial-gradient(farthest-corner at 10px 10px, white, #369CD4, #369CD4);
   border-radius: 50%;
   border: 2px solid white;
   box-shadow: 0 0 2px 2px rgba(0,0,0,.5);
   height: 30px;
   width: 30px;
-}
-
-.top-section__small-buttons {                                  /* trafic light properties*/
+  }
+  
+  .top-section__small-buttons {                                  /* trafic light properties*/
   display: flex;
   margin: 0 25px;                                              /* here using gap is also posible but margin:0, 25px. Puts distance between camera and trafic light too*/
-}
-
-.top-section__red,                                            /* trafic light color*/
-.top-section__yellow,
-.top-section__green {
+  }
+  
+  .top-section__red,                                            /* trafic light color*/
+  .top-section__yellow,
+  .top-section__green {
   border-radius: 50%;
   border: 1px solid black;
   height: 10px;
   margin-right: 5px;
   width: 10px;
-}
-
-.left-container__main-section-container {
+  }
+  
+  .left-container__main-section-container {
   display: flex;
   height: calc(100% - 50px);                                /* why 100% - 50px. Because hight of top part of device is 50px*/
-}
-
-.left-container__main-section {                            /* Parts of display in the left part of device*/
+  }
+  
+  .left-container__main-section {                            /* Parts of display in the left part of device*/
   height: 100%;
   padding: 25px;
   width: 500px;
-}
-
-.main-section__white {                                
+  }
+  
+  .main-section__white {                                
   background: #DEDEDE;
   border: 3px solid black;
   box-shadow: inset 0 0 3px 3px rgba(0,0,0,.3);
   height: 325px;
-}
-
-.main-section__black {
+  }
+  
+  .main-section__black {
   background: black;
   height: calc(100% - 50px);
   margin: 25px;
   padding: 10px;
   width: calc(100% - 50px);
-}
-
-.main-screen {
+  }
+  
+  .main-screen {
   border-radius: 15px;
   height: 100%;
   padding: 15px;
-}
-
-.screen__header {
+  }
+  
+  .screen__header {
   align-items: center;
   display: flex;
   justify-content: space-between;
-}
-
-/* todo: add additional style to pocemons here */
-.poke-name {
+  }
+  
+  /* todo: add additional style to pocemons here */
+  .poke-name {
   color: white;
   font-size: 25px;
   font-weight: bold;
-}
-
-.poke-id {
+  }
+  
+  .poke-id {
   color: rgba(0,0,0,.5);
   font-size: 20px;
-}
-
-.screen__image {
+  }
+  
+  .screen__image {
   display: flex;
   justify-content: space-around;
-}
-
-.poke-front-image,
-.poke-back-image {
+  }
+  
+  .poke-front-image,
+  .poke-back-image {
   height: 96px;
   width: 96px;
-}
-
-.screen__description {
+  }
+  
+  .screen__description {
   display: flex;
   height: 100px;
   justify-content: space-around;
-}
-
-.screen__stats {
+  }
+  
+  .screen__stats {
   background: rgba(0,0,0,.3);
   border-radius: 5px;
   color: white;
@@ -144,91 +146,91 @@ body {
   height: 100%;
   justify-content: space-between;
   padding: 20px 15px;
-}
-
-.stats__types {
+  }
+  
+  .stats__types {
   height: 100%;
   padding: 5px;
-}
-
-.poke-type-one,
-.poke-type-two {
+  }
+  
+  .poke-type-one,
+  .poke-type-two {
   background: rgba(255,255,255,.3);
   border-radius: 25px;
   display: block;
   margin-bottom: 10px;
   padding: 10px;
   text-align: center;
-}
-
-.left-container__controllers {
+  }
+  
+  .left-container__controllers {
   align-items: center;
   display: flex;
   justify-content: space-around;
   margin: 10px 25px 0;
-}
-
-.controllers__d-pad {
+  }
+  
+  .controllers__d-pad {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
-}
-
-.d-pad__cell {
+  }
+  
+  .d-pad__cell {
   background: black;
   box-shadow: 0 0 2px 2px rgba(0,0,0, .3);
   height: 25px;
   width: 25px;
-}
-
-.d-pad__cell.top {
+  }
+  
+  .d-pad__cell.top {
   border-left: 1px solid dimgrey;
   border-radius: 5px 5px 0 0;
   border-right: 1px solid dimgrey;
   border-top: 1px solid dimgrey;
   grid-column: 2 / span 1;
   grid-row: 1 / span 1;
-}
-
-.d-pad__cell.left {
+  }
+  
+  .d-pad__cell.left {
   border-bottom: 1px solid dimgrey;
   border-left: 1px solid dimgrey;
   border-radius: 5px 0 0 5px;
   border-top: 1px solid dimgrey;
   grid-column: 1 / span 1;
   grid-row: 2 / span 1;
-}
-
-.d-pad__cell.middle {
-  grid-column: 2 / span 1;
-  grid-row: 2 / span 1;
-}
-
-.d-pad__cell.right {
+  }
+  
+  .d-pad__cell.middle {
+  grid-column: 2 / span 1;                                            /* This CSS code will assign span 1 to the grid-column property of an element, meaning that the element will span one column of the grid. */                   
+  grid-row: 2 / span 1;                                               /* This CSS code will assign span 1 to the grid-column property of an element, meaning that the element will span one column of the grid. */     
+  }
+  
+  .d-pad__cell.right {
   border-bottom: 1px solid dimgrey;
   border-radius: 0 5px 5px 0;
   border-right: 1px solid dimgrey;
   border-top: 1px solid dimgrey;
-  grid-column: 3 / span 1;
-  grid-row: 2 / span 1;
-}
-
-.d-pad__cell.bottom {
+  grid-column: 3 / span 1;                                           /* This CSS code will assign span 1 to the grid-column property of an element, meaning that the element will span one column of the grid. */               
+  grid-row: 2 / span 1;                                              /* This CSS code will assign span 1 to the grid-column property of an element, meaning that the element will span one column of the grid. */                   
+  }
+  
+  .d-pad__cell.bottom {
   border-bottom: 1px solid dimgrey;
   border-left: 1px solid dimgrey;
   border-radius: 0 0 5px 5px;
   border-right: 1px solid dimgrey;
-  grid-column: 2 / span 1;
-  grid-row: 3 / span 1;
-}
-
-.controllers__buttons {
+  grid-column: 2 / span 1;                                            /* This CSS code will assign span 1 to the grid-column property of an element, meaning that the element will span one column of the grid. */                    
+  grid-row: 3 / span 1;                                               /* This CSS code will assign span 1 to the grid-column property of an element, meaning that the element will span one column of the grid. */                        
+  }
+  
+  .controllers__buttons {
   display: flex;
   justify-content: space-around;
   width: 100px;
-}
-
-.buttons__button {
+  }
+  
+  .buttons__button {
   align-items: center;
   background: black;
   border-radius: 50%;
@@ -239,67 +241,67 @@ body {
   height: 35px;
   justify-content: center;
   width: 35px;
-}
-
-.buttons__button:first-child {
+  }
+  
+  .buttons__button:first-child {
   margin-top: 5px;
-}
-
-.buttons__button:last-child {
+  }
+  
+  .buttons__button:last-child {
    margin-top: -5px;
- }
-
-
-.left-container__right {
+  }
+  
+  
+  .left-container__right {
   border-left: 3px solid black;
   display: flex;
   flex-direction: column;
   height: 100%;
   justify-content: space-between;
   width: 50px;
-}
-
-.left-container__hinge {
+  }
+  
+  .left-container__hinge {
   background: linear-gradient(to right, #7F100F, #E71D23, #E71D23, #7F100F);
   height: 75px;
   width: 100%;
-}
-
-.left-container__hinge:first-child {
+  }
+  
+  .left-container__hinge:first-child {
   border-bottom: 3px solid black;
-}
-
-.left-container__hinge:last-child {
+  }
+  
+  .left-container__hinge:last-child {
   border-top: 3px solid black;
-}
-
-.top-section__red {
+  }
+  
+  .top-section__red {
   background: #7F100F;
-}
-
-.top-section__yellow {
+  }
+  
+  .top-section__yellow {
   background: #EDF18E;
-}
-
-.top-section__green {
+  }
+  
+  .top-section__green {
   background: #33915A;
-}
-
-.right-container {
+  }
+  
+  .right-container {
   background: #E71D23;
   height: calc(100% - 50px);
   padding: 25px;
   width: calc(50% - 50px);
-}
-
-.right-container__black {
+  }
+  
+  .right-container__black {
   background: black;
   box-shadow: 0 0 2px 2px rgba(0,0,0,.3);
   height: 300px;
   padding: 10px;
-}
-
-.right-container__screen {
+  }
+  
+  .right-container__screen {
   background: #43B0F2;
   border-radius: 15px;
   display: flex;
@@ -307,9 +309,9 @@ body {
   flex-wrap: wrap;
   height: 100%;
   padding: 15px 15px 0;
-}
-
-.list-item {
+  }
+  
+  .list-item {
   align-items: center;
   color: white;
   cursor: pointer;
@@ -319,26 +321,26 @@ body {
   overflow-x: hidden;
   padding-left: 5px;
   width: 50%;
-}
-
-.list-item:hover {
+  }
+  
+  .list-item:hover {
   background: #85cbf2;
   color: black;
-}
-
-.list-item:active {
+  }
+  
+  .list-item:active {
   background: #1280f2;
   color: white;
-}
-
-.right-container__buttons {
+  }
+  
+  .right-container__buttons {
   display: flex;
   justify-content: space-around;
   margin-top: 25px;
-}
-
-.left-button,
-.right-button {
+  }
+  
+  .left-button,
+  .right-button {
   align-items: center;
   background: #DEDEDE;
   border-radius: 3px;
@@ -351,91 +353,91 @@ body {
   justify-content: center;
   text-transform: uppercase;
   width: 100px;
-}
-
-.left-button:hover,
-.right-button:hover {
+  }
+  
+  .left-button:hover,
+  .right-button:hover {
   background: white;
-}
-
-.left-button:active,
-.right-button:active {
+  }
+  
+  .left-button:active,
+  .right-button:active {
   box-shadow: inset 0 0 2px 2px rgba(0,0,0,.3);
-}
-
-
-.hide {
+  }
+  
+  
+  .hide {
   display: none;
-}
-
-.normal {
+  }
+  
+  .normal {
   background: #BABAAE;
-}
-
-.fighting {
+  }
+  
+  .fighting {
   background: #A75543;
-}
-
-.flying {
+  }
+  
+  .flying {
   background: #78A2FF;
-}
-
-.poison {
+  }
+  
+  .poison {
   background: #A95CA0;
-}
-
-.ground {
+  }
+  
+  .ground {
   background: #EECC55;
-}
-
-.rock {
+  }
+  
+  .rock {
   background: #CCBD72;
-}
-
-.bug {
+  }
+  
+  .bug {
   background: #C2D21E;
-}
-
-.ghost {
+  }
+  
+  .ghost {
   background: #7975D7;
-}
-
-.steel {
+  }
+  
+  .steel {
   background: #C4C2DB;
-}
-
-.fire {
+  }
+  
+  .fire {
   background: #FA5643;
-}
-
-.water {
+  }
+  
+  .water {
   background: #56ADFF;
-}
-
-.grass {
+  }
+  
+  .grass {
   background: #8CD750;
-}
-
-.electric {
+  }
+  
+  .electric {
   background: #FDE139;
-}
-
-.psychic {
+  }
+  
+  .psychic {
   background: #FA65B4;
-}
-
-.ice {
+  }
+  
+  .ice {
   background: #96F1FF;
-}
-
-.dragon {
+  }
+  
+  .dragon {
   background: #8673FF;
-}
-
-.dark {
+  }
+  
+  .dark {
   background: #8D6855;
-}
-
-.fairy {
+  }
+  
+  .fairy {
   background: #F9AEFF;
-}
+  }
